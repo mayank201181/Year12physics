@@ -641,7 +641,7 @@ export const mcqPapers: Paper[] = [
   // ===========================================================================
   {
     id: "b1-thermal-gases-m3",
-    title: "Paper 3 · Graphs, Models & HL Thermodynamic Cycles",
+    title: "Set 3 · Graphs, Models & HL Thermodynamic Cycles",
     level: "HL",
     questions: [
       {

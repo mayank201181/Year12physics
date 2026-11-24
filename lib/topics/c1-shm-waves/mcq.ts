@@ -693,7 +693,7 @@ export const mcqPapers: Paper[] = [
   // ===========================================================================
   {
     id: "c1-shm-waves-m3",
-    title: "MCQ Paper 3 — HL Quantitative SHM, Phase & Wave Synthesis",
+    title: "MCQ Set 3 — HL Quantitative SHM, Phase & Wave Synthesis",
     level: "HL",
     questions: [
       {
