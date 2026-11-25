@@ -20,6 +20,10 @@ export interface TopicMeta {
   title: string;
   strand: Strand;
   icon: string;
+  /** Which IB Diploma year normally finishes this topic (1 = DP1 / Year 12, 2 = DP2 / Year 13). */
+  dpYear: 1 | 2;
+  /** Teaching/revision order used when ?dp=2 is active (DP2 first, then DP1). */
+  dpOrder: number;
   level: IBLevel;
   curriculum: string;
   sections: SectionPlan[];
@@ -40,6 +44,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "A.1–A.3 Kinematics, Forces, Momentum & Energy",
     strand: "Theme A: Space, Time & Motion",
     icon: "🚀",
+    dpYear: 1,
+    dpOrder: 6,
     level: "SL",
     curriculum: "IB Physics FA2025 A.1 Kinematics, A.2 Forces & momentum, A.3 Work, energy & power (SL & HL core)",
     sections: [
@@ -74,6 +80,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "A.4–A.5 Rigid Body Mechanics & Special Relativity",
     strand: "Theme A: Space, Time & Motion",
     icon: "🌀",
+    dpYear: 2,
+    dpOrder: 1,
     level: "HL",
     curriculum: "IB Physics FA2025 A.4 Rigid body mechanics & A.5 Galilean and special relativity (HL Only)",
     sections: [
@@ -110,6 +118,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "B.1–B.4 Thermal Transfers, Greenhouse, Gases & Thermodynamics",
     strand: "Theme B: Particulate Nature of Matter",
     icon: "🌡️",
+    dpYear: 1,
+    dpOrder: 7,
     level: "SL",
     curriculum: "IB Physics FA2025 B.1 Thermal energy transfers, B.2 Greenhouse effect, B.3 Gas laws & B.4 Thermodynamics [HL]",
     sections: [
@@ -144,6 +154,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "B.5 Current, Resistance, EMF & Electrical Circuits",
     strand: "Theme B: Particulate Nature of Matter",
     icon: "🔌",
+    dpYear: 1,
+    dpOrder: 8,
     level: "SL",
     curriculum: "IB Physics FA2025 B.5 Current and circuits (SL & HL core)",
     sections: [
@@ -180,6 +192,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "C.1–C.2 Simple Harmonic Motion & The Wave Model",
     strand: "Theme C: Wave Behaviour",
     icon: "〰️",
+    dpYear: 1,
+    dpOrder: 9,
     level: "SL",
     curriculum: "IB Physics FA2025 C.1 Simple harmonic motion (SL + HL) & C.2 Wave model (SL & HL core)",
     sections: [
@@ -214,6 +228,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "C.3–C.5 Wave Phenomena, Standing Waves & Doppler Effect",
     strand: "Theme C: Wave Behaviour",
     icon: "🌈",
+    dpYear: 1,
+    dpOrder: 10,
     level: "SL",
     curriculum: "IB Physics FA2025 C.3 Wave phenomena (SL + HL), C.4 Standing waves & resonance, C.5 Doppler effect (SL + HL)",
     sections: [
@@ -250,6 +266,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "D.1–D.3 Gravitational, Electric & Magnetic Fields",
     strand: "Theme D: Fields",
     icon: "🧲",
+    dpYear: 2,
+    dpOrder: 2,
     level: "SL",
     curriculum: "IB Physics FA2025 D.1 Gravitational fields (SL + HL), D.2 Electric & magnetic fields (SL + HL), D.3 Motion in EM fields",
     sections: [
@@ -284,6 +302,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "D.4 Electromagnetic Induction",
     strand: "Theme D: Fields",
     icon: "⚡",
+    dpYear: 2,
+    dpOrder: 3,
     level: "HL",
     curriculum: "IB Physics FA2025 D.4 Electromagnetic induction (HL Only)",
     sections: [
@@ -320,6 +340,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "E.1–E.2 Atomic Structure & Quantum Physics",
     strand: "Theme E: Nuclear & Quantum Physics",
     icon: "🔬",
+    dpYear: 2,
+    dpOrder: 4,
     level: "SL",
     curriculum: "IB Physics FA2025 E.1 Structure of the atom (SL + HL) & E.2 Quantum physics [HL]",
     sections: [
@@ -354,6 +376,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "E.3–E.5 Radioactive Decay, Fission, Fusion & Stars",
     strand: "Theme E: Nuclear & Quantum Physics",
     icon: "⭐",
+    dpYear: 2,
+    dpOrder: 5,
     level: "SL",
     curriculum: "IB Physics FA2025 E.3 Radioactive decay (SL + HL), E.4 Fission, E.5 Fusion and stars",
     sections: [
